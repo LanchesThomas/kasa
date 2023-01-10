@@ -5,6 +5,7 @@ import About from './pages/About/index'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import resolution from './utils/resolution'
+import Error from './pages/Error'
 
 const Globalstyle = createGlobalStyle`
 body {
@@ -29,6 +30,7 @@ root.render(
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>
