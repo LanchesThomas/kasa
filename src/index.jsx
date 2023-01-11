@@ -4,16 +4,17 @@ import Home from './pages/Home/index'
 import About from './pages/About/index'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
-import resolution from './utils/resolution'
 import Error from './pages/Error'
 
 const Globalstyle = createGlobalStyle`
+html {
+  height: 100%;
+}
 body {
   font-family: 'Montserrat';
-  max-width: ${resolution.max};
-  min-width: ${resolution.min};
-  margin: 20px auto;
-
+  height: 100%;
+  padding: 10px;
+  margin: 15px 0px;
 }
 * { 
   padding: 0;

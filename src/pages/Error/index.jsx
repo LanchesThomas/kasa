@@ -3,26 +3,29 @@ import styled from 'styled-components'
 import colors from '../../utils/colors'
 import { Link } from 'react-router-dom'
 import resolution from '../../utils/resolution'
+import Footer from '../../components/Footer'
 
-const ErrorDiv = styled.div``
+const Main = styled.main`
+  height: 100vh;
+  margin: 20px auto;
+  max-width: ${resolution.max};
+  min-width: ${resolution.min};
+`
 
 const ContentErrorDiv = styled.div`
-  padding: 30% 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 25px;
-  @media only screen and (min-width: ${resolution.medium}) {
-    padding: 15% 5%;
-  }
+  padding: 150px 25px;
 `
 const Error404 = styled.p`
-color: ${colors.primary};
-text-align: center;
-font-weight: 700;
-font-size: 96px;
-@media only screen and (min-width: ${resolution.large}) {
+  color: ${colors.primary};
+  text-align: center;
+  font-weight: 700;
+  font-size: 96px;
+  @media only screen and (min-width: ${resolution.large}) {
     font-size: 288px;
   }
 `
@@ -50,14 +53,19 @@ const RedirectionLink = styled(Link)`
 
 const Error = () => {
   return (
-    <ErrorDiv>
-      <Header />
-      <ContentErrorDiv>
-        <Error404>404</Error404>
-        <ErrorText>Oups! La page que vous demandez n'existe pas.</ErrorText>
-        <RedirectionLink to='/'>Retourner sur la page d'acceuil</RedirectionLink>
-      </ContentErrorDiv>
-    </ErrorDiv>
+    <div>
+      <Main>
+        <Header />
+        <ContentErrorDiv>
+          <Error404>404</Error404>
+          <ErrorText>Oups! La page que vous demandez n'existe pas.</ErrorText>
+          <RedirectionLink to="/">
+            Retourner sur la page d'acceuil
+          </RedirectionLink>
+        </ContentErrorDiv>
+      </Main>
+        <Footer />
+    </div>
   )
 }
 

@@ -5,18 +5,15 @@ import colors from '../../utils/colors'
 import resolution from '../../utils/resolution'
 
 const NavDiv = styled.div`
-height: 100%;
-width: 45%;
-justify-content: flex-end;
+width: 100%;
 display: flex;
 align-items: center;
 `
 
 const NavUl = styled.ul`
-padding: 0px;
 display: flex;
-justify-content: center;
-width: 50%;
+justify-content: flex-end;
+width: 100%;
 gap: 10%;
 white-space: nowrap;
 `
@@ -26,11 +23,8 @@ const NavLink = styled(Link)`
   color: ${Colors.primary};
   font-weight: 500;
   font-size: 12px;
-  @media only screen and (min-width: ${resolution.medium}) {
-    font-size: 18px;
-  }
   @media only screen and (min-width: ${resolution.large}) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `
 const NavList = styled.li`
