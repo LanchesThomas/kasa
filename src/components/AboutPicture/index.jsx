@@ -4,7 +4,7 @@ import AboutImg from '../../assets/about-picture.jpg'
 
 const AboutPictureDiv = styled.div`
   width: 100%;
-  margin: 20px auto;
+  margin: 40px auto;
   height: 223px;
 `
 

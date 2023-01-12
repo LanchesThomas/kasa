@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import DownArrow from '../../assets/down-arrow.png'
 import { useEffect, useState } from 'react'
 import resolution from '../../utils/resolution'
+import DownArrowSm from '../../assets/down-arrow-sm.png'
+import { useWindowSize } from '../../utils/hooks'
 
 const AboutDropdownDiv = styled.div`
   width: 100%;
@@ -10,6 +12,7 @@ const AboutDropdownDiv = styled.div`
   flex-direction: column;
   margin: 30px 0px;
   gap: 30px;
+  transition: all 300ms
   @media only screen and (min-width: ${resolution.large}) {
     margin: 45px 0px;
   }
@@ -43,9 +46,6 @@ const DownArrowImg = styled.img`
   padding: 10px;
   transform: rotate(180deg);
   transition: transform 300ms;
-  @media only screen and (min-width: ${resolution.large}) {
-    padding: 15px;
-  }
 `
 
 const DropdownContentDiv = styled.div`
@@ -56,6 +56,8 @@ const DropdownContentDiv = styled.div`
   position: relative;
   margin-top: -40px;
   z-index: -1;
+  border: 2px solid red;
+  transition: padding 300ms;
 `
 
 const DropdownContentText = styled.p`
@@ -71,18 +73,32 @@ const DropdownContentText = styled.p`
 const AboutDropdown = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false)
   const [isRotate, setIsRotate] = useState('0deg')
+  const [isLarge, setIsLarge] = useState(false)
+  const screenWidth = useWindowSize().width
 
   function toggleFunction() {
     setIsActive(!isActive)
   }
 
+  // arrow size according to screen width
   useEffect(() => {
-    let arrow = document.querySelector(`.${title}`)
+    if (screenWidth >= 1025) {
+      setIsLarge(true)
+      console.log(isLarge)
+    } else {
+      setIsLarge(false)
+      console.log(isLarge)
+    }
+  }, [screenWidth])
+
+  // arrow rotation
+  useEffect(() => {
+    const arrow = document.querySelector(`.${title}`)
     if (isActive) {
-      setIsRotate('180deg')
+      setIsRotate('0deg')
       arrow.style.transform = `rotate(${isRotate})`
     } else {
-      setIsRotate('0deg')
+      setIsRotate('180deg')
       arrow.style.transform = `rotate(${isRotate})`
     }
   }, [isActive])
@@ -91,7 +107,10 @@ const AboutDropdown = ({ title, content }) => {
     <AboutDropdownDiv>
       <DropdownWord onClick={toggleFunction}>
         <DropdownTitle>{title}</DropdownTitle>
-        <DownArrowImg src={DownArrow} className={title} />
+        <DownArrowImg
+          src={isLarge ? DownArrow : DownArrowSm}
+          className={title}
+        />
       </DropdownWord>
       {isActive && (
         <DropdownContentDiv>

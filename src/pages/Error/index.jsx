@@ -7,7 +7,7 @@ import Footer from '../../components/Footer'
 
 const Main = styled.main`
   height: 100vh;
-  margin: 20px auto;
+  margin: auto;
   max-width: ${resolution.max};
   min-width: ${resolution.min};
 `
@@ -54,8 +54,8 @@ const RedirectionLink = styled(Link)`
 const Error = () => {
   return (
     <div>
-      <Main>
         <Header />
+      <Main>
         <ContentErrorDiv>
           <Error404>404</Error404>
           <ErrorText>Oups! La page que vous demandez n'existe pas.</ErrorText>

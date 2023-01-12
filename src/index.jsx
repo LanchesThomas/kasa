@@ -5,6 +5,8 @@ import About from './pages/About/index'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Error from './pages/Error'
+import LogementsData from './datas/logements.json'
+import Logement from './pages/Logement'
 
 const Globalstyle = createGlobalStyle`
 html {
@@ -13,7 +15,6 @@ html {
 body {
   font-family: 'Montserrat';
   height: 100%;
-  padding: 10px;
   margin: 15px 0px;
 }
 * { 
@@ -30,6 +31,7 @@ root.render(
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path={`/logement/:id`} element={<Logement />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<Error />} />
       </Routes>

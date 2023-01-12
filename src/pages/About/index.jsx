@@ -15,7 +15,7 @@ const Main = styled.main`
   padding-bottom: 200px;
 `
 
-const index = () => {
+const About = () => {
   return (
     <div>
       <Header />
@@ -30,4 +30,4 @@ const index = () => {
   )
 }
 
-export default index
+export default About

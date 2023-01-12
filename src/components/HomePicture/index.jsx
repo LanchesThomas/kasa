@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import resolution from '../../utils/resolution'
 
 const HomePictureDiv = styled.div`
-  margin: 20px auto;
-  width: 90%;
+  margin: 40px auto;
+  width: 100%;
   height: 111px;
   border-radius: 10px;
   position: relative;
