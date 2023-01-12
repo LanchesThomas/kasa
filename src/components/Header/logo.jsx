@@ -1,7 +1,4 @@
-import LetterK from '../../assets/Header-Logo/VectorK.png'
-import LetterHome from '../../assets/Header-Logo/VectorHome.png'
-import LetterS from '../../assets/Header-Logo/VectorS.png'
-import LetterA from '../../assets/Header-Logo/VectorA.png'
+import HeaderLogo from '../../assets/Header-Logo/logo.png'
 import styled from 'styled-components'
 import resolution from '../../utils/resolution'
 
@@ -14,21 +11,18 @@ const LogoDiv = styled.a`
 `
 
 const LogoImg = styled.img`
-  width: 30px;
+  width: 120px;
   height: 85%;
-  ${(props) => (props.$LetterK ? 'height: 100%' : '')};
-  @media only screen and (min-width: ${resolution.medium}) {
-    width: 50px;
+  @media only screen and (min-width: ${resolution.large}) {
+    width: 160px;
   }
 `
 
 const Logo = () => {
   return (
     <LogoDiv href="/">
-      <LogoImg $LetterK src={LetterK} alt="Logo" />
-      <LogoImg src={LetterHome} alt="Logo" />
-      <LogoImg src={LetterS} alt="Logo" />
-      <LogoImg src={LetterA} alt="Logo" />
+      <LogoImg src={HeaderLogo} alt="Logo" />
+
     </LogoDiv>
   )
 }
