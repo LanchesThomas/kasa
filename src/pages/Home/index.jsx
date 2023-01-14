@@ -5,6 +5,7 @@ import resolution from '../../utils/resolution'
 import HomePicture from '../../components/HomePicture'
 import Card from '../../components/Card'
 import LogementsData from '../../datas/logements.json'
+import { fadeIn } from '../../utils/animation'
 
 const Main = styled.main`
   margin: auto;
@@ -16,10 +17,13 @@ const Main = styled.main`
 `
 const CardContainer = styled.ul`
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr;
-  gap: 35px;
+  border-radius: 25px;
+  animation: ${fadeIn} 2s ease-in-out;
   @media only screen and (min-width: ${resolution.medium}) {
     grid-template-columns: repeat(2, 1fr);
+    background: #f7f7f7;
   }
   @media only screen and (min-width: ${resolution.large}) {
     grid-template-columns: repeat(3, 1fr);
@@ -29,7 +33,7 @@ const CardContainer = styled.ul`
 function Home() {
   return (
     <div>
-        <Header />
+      <Header />
       <Main>
         <HomePicture />
 

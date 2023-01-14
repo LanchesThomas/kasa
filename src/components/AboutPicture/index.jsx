@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import AboutImg from '../../assets/about-picture.jpg'
+import { fadeIn } from '../../utils/animation'
 
 const AboutPictureDiv = styled.div`
   width: 100%;
-  margin: 40px auto;
+  margin: 20px auto;
   height: 223px;
+  animation: ${fadeIn} 1s ease-in-out;
 `
 
 const AboutPictureImg = styled.img`

@@ -1,13 +1,15 @@
 import HomePicturePhoto from '../../assets/home-picture.png'
 import styled from 'styled-components'
 import resolution from '../../utils/resolution'
+import { fadeIn } from '../../utils/animation'
 
 const HomePictureDiv = styled.div`
-  margin: 40px auto;
+  margin: 20px auto;
   width: 100%;
   height: 111px;
   border-radius: 10px;
   position: relative;
+  animation: ${fadeIn} 0.5s ease-in-out;
   @media only screen and (min-width: ${resolution.large}) {
     height: 223px;
   }
