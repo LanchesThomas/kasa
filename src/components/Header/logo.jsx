@@ -13,7 +13,7 @@ const LogoDiv = styled.a`
 const LogoImg = styled.img`
   width: 150px;
   height: 100%;
-  @media only screen and (min-width: ${resolution.large}) {
+  @media only screen and (min-width: ${resolution.medium}) {
     width: 200px;
   }
 `

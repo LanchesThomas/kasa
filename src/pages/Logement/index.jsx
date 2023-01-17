@@ -9,6 +9,7 @@ import Profil from '../../components/Logement-Page/profil'
 import Place from '../../components/Logement-Page/place'
 import Stars from '../../components/Logement-Page/stars'
 import CoverImg from '../../components/Logement-Page/cover-image'
+import AboutDropdown from '../../components/AboutDropdown/'
 
 const Logement = () => {
   const { id } = useParams()
@@ -31,7 +32,7 @@ const Logement = () => {
   min-width: ${resolution.min};
   width: 90%;
   position relative;
-  padding-bottom: 200px;
+  margin-bottom: 100px;
   `
 
   const ContentDiv = styled.div`
@@ -51,20 +52,40 @@ const Logement = () => {
     }
   `
 
+  const AboutDiv = styled.div`
+    @media only screen and (min-width: ${resolution.medium}) {
+      display: flex;
+      gap: 30px;
+    }
+  `
+
+  const ListEquipments = styled.li`
+    list-style: none;
+  `
 
   return (
     <div>
       <Header />
       <MainDiv>
-        <CoverImg pictures={pictures}/>
+        <CoverImg pictures={pictures} />
         <ContentDiv>
-          <Place title={title} location={location} tags={tags} />
+          <Place id={id} title={title} location={location} tags={tags} />
           <UserDiv>
-            <Stars />
+            <Stars rating={rating}/>
             <Profil host={host} />
           </UserDiv>
         </ContentDiv>
+        <AboutDiv>
+          <AboutDropdown title={'Description'} content={description} />
+          <AboutDropdown
+            title={'Equipements'}
+            content={equipments.map((equipment) => (
+              <ListEquipments key={`${equipment}-${id}`}>{equipment}</ListEquipments>
+            ))}
+          />
+        </AboutDiv>
       </MainDiv>
+      <Footer />
     </div>
   )
 }

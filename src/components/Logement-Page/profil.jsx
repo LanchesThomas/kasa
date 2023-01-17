@@ -15,14 +15,16 @@ const ProfilDiv = styled.div`
 `
 
 const ProfilName = styled.p`
-  width:30%;
+  max-width: 60px;
   font-weight: 500;
   font-size: 12px;
   line-height: 142.6%;
   color: ${colors.primary};
   text-align: right;
+  margin-right: 10px;
   @media only screen and (min-width: ${resolution.medium}) {
     font-size: 18px;
+    max-width: 80px;
   }
 `
 const ProfilPicture = styled.img`

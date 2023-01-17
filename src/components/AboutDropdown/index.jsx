@@ -14,7 +14,7 @@ const AboutDropdownDiv = styled.div`
   gap: 30px;
   transition: all 300ms;
   animation: ${fadeIn} 1s ease-in-out, ${translate} 1.5s ease-in-out;
-  @media only screen and (min-width: ${resolution.large}) {
+  @media only screen and (min-width: ${resolution.medium}) {
     margin: 45px 0px;
   }
 `
@@ -37,7 +37,7 @@ const DropdownTitle = styled.h2`
   align-items: center;
   padding-left: 12px;
   position: relative;
-  @media only screen and (min-width: ${resolution.large}) {
+  @media only screen and (min-width: ${resolution.medium}) {
     font-size: 24px;
     height: 47px;
   }
@@ -65,12 +65,12 @@ const DropdownContentText = styled.p`
   font-size: 12px;
   line-height: 142.6%;
   color: #ff6060;
-  @media only screen and (min-width: ${resolution.large}) {
+  @media only screen and (min-width: ${resolution.medium}) {
     font-size: 24px;
   }
 `
 
-const AboutDropdown = ({ title, content }) => {
+const AboutDropdown = ({ title, content}) => {
   const [isActive, setIsActive] = useState(false)
   const [isRotate, setIsRotate] = useState('0deg')
   const [isLarge, setIsLarge] = useState(false)
@@ -84,10 +84,8 @@ const AboutDropdown = ({ title, content }) => {
   useEffect(() => {
     if (screenWidth >= 1025) {
       setIsLarge(true)
-      console.log(isLarge)
     } else {
       setIsLarge(false)
-      console.log(isLarge)
     }
   }, [screenWidth])
 

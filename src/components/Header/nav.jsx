@@ -23,7 +23,7 @@ const NavLink = styled(Link)`
   color: ${Colors.primary};
   font-weight: 500;
   font-size: 12px;
-  @media only screen and (min-width: ${resolution.large}) {
+  @media only screen and (min-width: ${resolution.medium}) {
     font-size: 18px;
   }
 `

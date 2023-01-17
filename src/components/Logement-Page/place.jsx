@@ -61,14 +61,14 @@ const PlaceDiv = styled.div`
     }
   `
 
-const Place = ({title, location, tags}) => {
+const Place = ({title, location, tags, id}) => {
   return (
     <PlaceDiv>
       <Title>{title}</Title>
       <Location>{location}</Location>
       <TagsUl>
         {tags.map((tag) => (
-          <Tags>{tag}</Tags>
+          <Tags key={`${tag}-${id}`}>{tag}</Tags>
         ))}
       </TagsUl>
     </PlaceDiv>

@@ -41,8 +41,7 @@ const CardCover = styled.img`
   object-fit: cover;
   border-radius: 10px;
   filter: brightness(70%);
-  mix-blend-mode: darken;
-  transition: filter 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   
 `
 
@@ -54,6 +53,7 @@ const CardTitle = styled.h2`
   left: 15px;
   bottom: 15px;
   max-width: 250px;
+  transition: 0.2s ease-in-out;
 `
 
 const Cardlink = styled(Link)``
