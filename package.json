@@ -1,5 +1,6 @@
 {
   "name": "kasa",
+  "homepage": "http://localhost:3000/accueil",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

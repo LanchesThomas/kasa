@@ -7,7 +7,7 @@ import { fadeIn } from '../../utils/animation'
 const HeaderDiv = styled.header`
   max-width: ${resolution.max};
   min-width: ${resolution.min};
-  width:90%;
+  width: 90%;
   height: 55px;
   display: flex;
   justify-content: space-between;
@@ -15,8 +15,8 @@ const HeaderDiv = styled.header`
   margin: 25px auto;
   padding: 0px 10px;
   animation: ${fadeIn} 0.5s ease-in-out;
-  @media only screen and (min-width: ${resolution.medium}){
-    height: 68px
+  @media only screen and (min-width: ${resolution.medium}) {
+    height: 68px;
   }
 `
 

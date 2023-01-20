@@ -45,7 +45,7 @@ const HomePictureTextLg = styled.p`
     position: absolute;
     left: 9.6%;
     right: 32.53%;
-    top: 14.04%;
+    top: 25%;
     bottom: 80.05%;
     font-weight: 500;
     font-size: 24px;

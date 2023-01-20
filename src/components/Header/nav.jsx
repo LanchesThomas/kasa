@@ -5,17 +5,17 @@ import colors from '../../utils/colors'
 import resolution from '../../utils/resolution'
 
 const NavDiv = styled.div`
-width: 100%;
-display: flex;
-align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 `
 
 const NavUl = styled.ul`
-display: flex;
-justify-content: flex-end;
-width: 100%;
-gap: 10%;
-white-space: nowrap;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10%;
+  white-space: nowrap;
 `
 
 const NavLink = styled(Link)`
@@ -28,11 +28,11 @@ const NavLink = styled(Link)`
   }
 `
 const NavList = styled.li`
-list-style: none;
-border-bottom: 2px solid transparent;
-&:hover {
-    border-bottom: 2px solid ${colors.primary}
-}
+  list-style: none;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    border-bottom: 2px solid ${colors.primary};
+  }
 `
 
 const Nav = () => {
@@ -40,7 +40,7 @@ const Nav = () => {
     <NavDiv>
       <NavUl>
         <NavList>
-          <NavLink to="/">Accueil</NavLink>
+          <NavLink to="/accueil">Accueil</NavLink>
         </NavList>
         <NavList>
           <NavLink to="/about">A Propos</NavLink>

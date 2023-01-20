@@ -36,11 +36,10 @@ function Home() {
       <Header />
       <Main>
         <HomePicture />
-
         <CardContainer>
           {LogementsData.map((logement) => (
             <Card
-              key={logement.id}
+              key={`logement-${logement.id}`}
               id={logement.id}
               title={logement.title}
               cover={logement.cover}

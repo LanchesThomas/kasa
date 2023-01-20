@@ -54,17 +54,17 @@ const RedirectionLink = styled(Link)`
 const Error = () => {
   return (
     <div>
-        <Header />
+      <Header />
       <Main>
         <ContentErrorDiv>
           <Error404>404</Error404>
           <ErrorText>Oups! La page que vous demandez n'existe pas.</ErrorText>
-          <RedirectionLink to="/">
+          <RedirectionLink to="/accueil">
             Retourner sur la page d'acceuil
           </RedirectionLink>
         </ContentErrorDiv>
       </Main>
-        <Footer />
+      <Footer />
     </div>
   )
 }

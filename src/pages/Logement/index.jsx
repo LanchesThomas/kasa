@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import { useParams } from 'react-router-dom'
@@ -10,21 +9,12 @@ import Place from '../../components/Logement-Page/place'
 import Stars from '../../components/Logement-Page/stars'
 import CoverImg from '../../components/Logement-Page/cover-image'
 import AboutDropdown from '../../components/AboutDropdown/'
+import Error from '../Error'
+import { Navigate } from 'react-router-dom'
 
 const Logement = () => {
   const { id } = useParams()
   const logement = LogementsData.find((logement) => logement.id === id)
-  const {
-    title,
-    cover,
-    pictures,
-    description,
-    host,
-    rating,
-    location,
-    equipments,
-    tags,
-  } = logement
 
   const MainDiv = styled.main`
   margin: auto;
@@ -63,30 +53,39 @@ const Logement = () => {
     list-style: none;
   `
 
-  return (
+  return logement ? (
     <div>
       <Header />
       <MainDiv>
-        <CoverImg pictures={pictures} />
+        <CoverImg pictures={logement.pictures} />
         <ContentDiv>
-          <Place id={id} title={title} location={location} tags={tags} />
+          <Place
+            id={id}
+            title={logement.title}
+            location={logement.location}
+            tags={logement.tags}
+          />
           <UserDiv>
-            <Stars rating={rating}/>
-            <Profil host={host} />
+            <Stars rating={logement.rating} />
+            <Profil host={logement.host} />
           </UserDiv>
         </ContentDiv>
         <AboutDiv>
-          <AboutDropdown title={'Description'} content={description} />
+          <AboutDropdown title={'Description'} content={logement.description} />
           <AboutDropdown
             title={'Equipements'}
-            content={equipments.map((equipment) => (
-              <ListEquipments key={`${equipment}-${id}`}>{equipment}</ListEquipments>
+            content={logement.equipments.map((equipment) => (
+              <ListEquipments key={`${equipment}-${id}`}>
+                {equipment}
+              </ListEquipments>
             ))}
           />
         </AboutDiv>
       </MainDiv>
       <Footer />
     </div>
+  ) : (
+    <Navigate to="/error" replace={<Error />} />
   )
 }
 

@@ -22,7 +22,11 @@ const About = () => {
       <Main>
         <AboutPicture />
         {collapses.map((collapse) => (
-          <AboutDropdown title={collapse.title} content={collapse.content} />
+          <AboutDropdown
+            key={`collapse-${collapse.title}`}
+            title={collapse.title}
+            content={collapse.content}
+          />
         ))}
       </Main>
       <Footer />

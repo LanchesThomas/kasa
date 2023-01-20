@@ -5,7 +5,6 @@ import About from './pages/About/index'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Error from './pages/Error'
-import LogementsData from './datas/logements.json'
 import Logement from './pages/Logement'
 
 const Globalstyle = createGlobalStyle`
@@ -30,7 +29,7 @@ root.render(
     <Globalstyle />
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/accueil" element={<Home />} />
         <Route path={`/logement/:id`} element={<Logement />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<Error />} />

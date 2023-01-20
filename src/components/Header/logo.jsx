@@ -1,4 +1,4 @@
-import HeaderLogo from '../../assets/Header-Logo/logo.png'
+import HeaderLogo from '../../assets/logo.png'
 import styled from 'styled-components'
 import resolution from '../../utils/resolution'
 
@@ -20,9 +20,8 @@ const LogoImg = styled.img`
 
 const Logo = () => {
   return (
-    <LogoDiv href="/">
+    <LogoDiv href="/accueil">
       <LogoImg src={HeaderLogo} alt="Logo" />
-
     </LogoDiv>
   )
 }

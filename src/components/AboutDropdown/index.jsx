@@ -5,6 +5,7 @@ import resolution from '../../utils/resolution'
 import DownArrowSm from '../../assets/down-arrow-sm.png'
 import { useWindowSize } from '../../utils/hooks'
 import { fadeIn, translate } from '../../utils/animation'
+
 const AboutDropdownDiv = styled.div`
   width: 100%;
   border: 100%;
@@ -12,8 +13,8 @@ const AboutDropdownDiv = styled.div`
   flex-direction: column;
   margin: 30px 0px;
   gap: 30px;
-  transition: all 300ms;
-  animation: ${fadeIn} 1s ease-in-out, ${translate} 1.5s ease-in-out;
+  cursor: pointer;
+  animation: ${fadeIn} 1s ease-in-out, ${translate} 1s ease-in-out;
   @media only screen and (min-width: ${resolution.medium}) {
     margin: 45px 0px;
   }
@@ -57,7 +58,7 @@ const DropdownContentDiv = styled.div`
   position: relative;
   margin-top: -40px;
   z-index: -1;
-  transition: padding 300ms;
+  animation: ${fadeIn} 0.5s;
 `
 
 const DropdownContentText = styled.p`
@@ -70,7 +71,7 @@ const DropdownContentText = styled.p`
   }
 `
 
-const AboutDropdown = ({ title, content}) => {
+const AboutDropdown = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false)
   const [isRotate, setIsRotate] = useState('0deg')
   const [isLarge, setIsLarge] = useState(false)
