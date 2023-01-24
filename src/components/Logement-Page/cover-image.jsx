@@ -86,7 +86,6 @@ const CoverImg = ({ pictures, id }) => {
     setVisible(visible <= 0 ? length - 1 : visible - 1)
   }
 
-  console.log(length)
   return (
     <CoverDiv>
       {pictures.map((picture, index) => (

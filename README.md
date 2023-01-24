@@ -1,3 +1,11 @@
+# Step to start Kasa
+
+## Install dependencies
+### yarn install // npm install
+
+## Launch React
+### yarn start // npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
