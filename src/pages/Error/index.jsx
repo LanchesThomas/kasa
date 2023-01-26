@@ -6,8 +6,8 @@ import resolution from '../../utils/resolution'
 import Footer from '../../components/Footer'
 
 const Main = styled.main`
-  height: 100vh;
   margin: auto;
+  padding-bottom: 200px;
   max-width: ${resolution.max};
   min-width: ${resolution.min};
 `

@@ -43,14 +43,6 @@ function Home() {
               id={logement.id}
               title={logement.title}
               cover={logement.cover}
-              pictures={logement.pictures}
-              description={logement.description}
-              hostName={logement.host.name}
-              hostPicture={logement.host.picture}
-              rating={logement.rating}
-              location={logement.location}
-              equipments={logement.equipments}
-              tags={logement.tags}
             />
           ))}
         </CardContainer>

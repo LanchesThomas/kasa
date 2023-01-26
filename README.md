@@ -1,10 +1,10 @@
 # Step to start Kasa
 
 ## Install dependencies
-### yarn install // npm install
+### `yarn install` // `npm install`
 
 ## Launch React
-### yarn start // npm start
+### `yarn start` // `npm start`
 
 # Getting Started with Create React App
 

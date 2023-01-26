@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <DivFooter>
       <DivLogo>
-        <LogoFooter $LetterK src={Logo} />
+        <LogoFooter src={Logo} />
       </DivLogo>
       <RightsFooter>© 2020 Kasa. All rights reserved</RightsFooter>
     </DivFooter>
