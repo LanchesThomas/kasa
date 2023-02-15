@@ -40,7 +40,7 @@ const Nav = () => {
     <NavDiv>
       <NavUl>
         <NavList>
-          <NavLink to="/">Accueil</NavLink>
+          <NavLink to="/kasa">Accueil</NavLink>
         </NavList>
         <NavList>
           <NavLink to="/about">A Propos</NavLink>
