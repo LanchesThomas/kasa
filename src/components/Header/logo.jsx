@@ -20,7 +20,7 @@ const LogoImg = styled.img`
 
 const Logo = () => {
   return (
-    <LogoDiv href="/kasa">
+    <LogoDiv href="/">
       <LogoImg src={HeaderLogo} alt="Logo" />
     </LogoDiv>
   )

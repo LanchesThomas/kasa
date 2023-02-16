@@ -29,7 +29,7 @@ root.render(
     <Globalstyle />
     <Router>
       <Routes>
-        <Route exact path="/kasa" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path={`/logement/:id`} element={<Logement />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<Error />} />
