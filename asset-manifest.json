@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/kasa/static/js/main.70626ac8.js",
+    "static/media/about-picture.jpg": "/kasa/static/media/about-picture.161cc9194b8fa99b3ed4.jpg",
+    "static/media/home-picture.png": "/kasa/static/media/home-picture.ac3aa7396c2c7cd05e2e.png",
+    "index.html": "/kasa/index.html",
+    "main.70626ac8.js.map": "/kasa/static/js/main.70626ac8.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.70626ac8.js"
+  ]
+}
