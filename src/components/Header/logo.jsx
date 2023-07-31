@@ -20,7 +20,7 @@ const LogoImg = styled.img`
 
 const Logo = () => {
   return (
-    <LogoDiv href="https://subdomain-lanchesthomas.netlify.app">
+    <LogoDiv href="/kasa">
       <LogoImg src={HeaderLogo} alt="Logo" />
     </LogoDiv>
   )
